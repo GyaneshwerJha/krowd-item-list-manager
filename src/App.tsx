@@ -48,8 +48,30 @@ export default function App() {
     ]);
   }
 
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   toast.promise(
+  //     new Promise((resolve) => {
+  //       addNote();
+  //       resolve();
+  //     }),
+  //     {
+  //       loading: "Adding note...",
+  //       success: <span>{`${text} Added!`}</span>,
+  //       error: <span>Failed to add note</span>,
+  //     },
+  //     {
+  //       duration: 8000,
+  //     }
+  //   );
+  //   setText("");
+  // }
   function handleSubmit(e) {
     e.preventDefault();
+    if (!text.trim()) {
+      toast.error("Please enter a valid todo!");
+      return;
+    }
     toast.promise(
       new Promise((resolve) => {
         addNote();
@@ -67,6 +89,7 @@ export default function App() {
     setText("");
   }
 
+  
   function handleDelete(id) {
     setNotes((prevNotes) => prevNotes.filter((note) => note.id !== id));
     toast.success("Todo  Deleted!");
