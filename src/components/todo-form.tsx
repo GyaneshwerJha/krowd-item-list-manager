@@ -13,12 +13,12 @@ export default function TodoForm({ submit, change, text }) {
       <form onSubmit={submit}>
         <span className={`text-center accordion mb-3 ${darkTheme ? "text-light" : ""}`}>
           <center>
-            <FaNoteSticky /> Add Todos
+            <FaNoteSticky /> Add Item
           </center>
         </span>
   
         <TextField
-          label="Todo title"
+          label="Item tittle"
           onChange={change}
           value={text}
           className="w-100 mt-3"
@@ -32,7 +32,7 @@ export default function TodoForm({ submit, change, text }) {
             startIcon={<FaPlus/>} 
             className="mt-2"
           >
-            Add Todo
+            Add Item
           </Button>
         </center>
       </form>

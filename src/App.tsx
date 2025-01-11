@@ -69,7 +69,7 @@ export default function App() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!text.trim()) {
-      toast.error("Please enter a valid todo!");
+      toast.error("Please enter a valid Item!");
       return;
     }
     toast.promise(
@@ -89,10 +89,10 @@ export default function App() {
     setText("");
   }
 
-  
+
   function handleDelete(id) {
     setNotes((prevNotes) => prevNotes.filter((note) => note.id !== id));
-    toast.success("Todo  Deleted!");
+    toast.success("Item  Deleted!");
   }
 
   function toggleNote(id) {
@@ -113,7 +113,7 @@ export default function App() {
         <center className="mt-5 mb-5">
           <span className={`${darkTheme ? "text-light" : ""} header`}>
             <img src="/icon.png" alt="logo" style={{ width: 200 }} />
-            <span>TODO APP</span>
+            <span>Krowd Item List Manager</span>
           </span>
         </center>
         <span>
@@ -142,7 +142,7 @@ export default function App() {
             className={`text-center accordion mb-2 ${darkTheme ? "text-light" : ""
               }`}
           >
-            <FaNoteSticky /> <span>Todos </span>
+            <FaNoteSticky /> <span>Items </span>
             <span className="badge bg-primary">{notes.length}</span>
           </span>
           {notes.length !== 0 && (
@@ -158,7 +158,7 @@ export default function App() {
           <ul className="list-group flex-column">
             {notes.length === 0 ? (
               <li className={`list-group-item ${darkTheme ? "text-light" : ""}`}>
-                No Todos available
+                No Item 
               </li>
             ) : (
               notes.map((note) => (
