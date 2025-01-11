@@ -1,18 +1,3 @@
-# React + TypeScript + Vite
+Project Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This Item List Manager React application was developed as part of an assignment for Krowd, showcasing fundamental React concepts and UI/UX best practices. The application allows users to enter and maintain a dynamic list of items. Users can add new items via an input field and a dedicated “Add Item” button, and the list updates in real time without a page refresh. The project demonstrates state management using React Hooks (useState), basic component structure, and minimal styling for a clean, user-friendly interface. By completing this assignment, it confirms familiarity with the essential tools and workflows recommended by Krowd for modern front-end development.
